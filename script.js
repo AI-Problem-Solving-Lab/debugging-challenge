@@ -27,7 +27,7 @@ function updateTicketTotal() {
   const ticketPrice = Number(ticketTypeSelect.value);
   const quantity = Number(ticketQuantitySelect.value);
   const ticketType = ticketPrice === 75 ? 'General Admission' : 'VIP';
-  const total = ticketPrice * quantity;
+  const total = ticketPrice + 75 * (quantity - 1);
 
   ticketSummary.textContent = `${quantity} × ${ticketType}`;
   ticketTotal.textContent = `$${total}`;
